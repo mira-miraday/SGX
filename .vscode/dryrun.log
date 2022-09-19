@@ -1,0 +1,40 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/node10/yangxu/SGXSSE-master/SE_SGX_1'
+ 
+cd CryptoTestingApp && /opt/intel/sgxsdk/bin/x64/sgx_edger8r --untrusted ../CryptoEnclave/CryptoEnclave.edl --search-path ../CryptoEnclave --search-path /opt/intel/sgxsdk/include
+echo "GEN  =>  CryptoTestingApp/CryptoEnclave_u.c"
+ 
+cc -m64 -O2 -fPIC -Wno-attributes -IInclude -IApp -I/opt/intel/sgxsdk/include -I/usr/include -I/usr/include/openssl -DNDEBUG -UEDEBUG -UDEBUG -c CryptoTestingApp/CryptoEnclave_u.c -o CryptoTestingApp/CryptoEnclave_u.o
+echo "CC   <=  CryptoTestingApp/CryptoEnclave_u.c"
+g++ -m64 -O2 -fPIC -Wno-attributes -IInclude -IApp -I/opt/intel/sgxsdk/include -I/usr/include -I/usr/include/openssl -DNDEBUG -UEDEBUG -UDEBUG -std=c++11 -c CryptoTestingApp/CryptoTestingApp.cpp -o CryptoTestingApp/CryptoTestingApp.o
+echo "CXX  <=  CryptoTestingApp/CryptoTestingApp.cpp"
+g++ -m64 -O2 -fPIC -Wno-attributes -IInclude -IApp -I/opt/intel/sgxsdk/include -I/usr/include -I/usr/include/openssl -DNDEBUG -UEDEBUG -UDEBUG -std=c++11 -c CryptoTestingApp/Server.cpp -o CryptoTestingApp/Server.o
+echo "CXX  <=  CryptoTestingApp/Server.cpp"
+ 
+g++ -m64 -O2 -fPIC -Wno-attributes -IInclude -IApp -I/opt/intel/sgxsdk/include -I/usr/include -I/usr/include/openssl -DNDEBUG -UEDEBUG -UDEBUG -std=c++11 -c CryptoTestingApp/Utils.cpp -o CryptoTestingApp/Utils.o
+echo "CXX  <=  CryptoTestingApp/Utils.cpp"
+g++ -m64 -O2 -fPIC -Wno-attributes -IInclude -IApp -I/opt/intel/sgxsdk/include -I/usr/include -I/usr/include/openssl -DNDEBUG -UEDEBUG -UDEBUG -std=c++11 -c CryptoTestingApp/Client.cpp -o CryptoTestingApp/Client.o
+echo "CXX  <=  CryptoTestingApp/Client.cpp"
+g++ CryptoTestingApp/CryptoEnclave_u.o CryptoTestingApp/CryptoTestingApp.o CryptoTestingApp/Server.o CryptoTestingApp/Utils.o CryptoTestingApp/Client.o -o cryptoTestingApp -m64 -O2 -L/opt/intel/sgxsdk/lib64 -lsgx_urts -lpthread -lpcap -L/opt/intel/sgxssl/lib64 -lsgx_usgxssl -lssl -lcrypto -lsgx_uae_service
+echo "LINK =>  cryptoTestingApp"
+ 
+cd CryptoEnclave && /opt/intel/sgxsdk/bin/x64/sgx_edger8r --trusted ../CryptoEnclave/CryptoEnclave.edl --search-path ../CryptoEnclave --search-path /opt/intel/sgxsdk/include
+echo "GEN  =>  CryptoEnclave/CryptoEnclave_t.c"
+cc -m64 -O2 -nostdinc -fvisibility=hidden -fpie -fstack-protector -IInclude -ICryptoEnclave -I/opt/intel/sgxsdk/include -I/opt/intel/sgxsdk/include/libcxx -I/opt/intel/sgxsdk/include/tlibc -I/opt/intel/sgxssl/include -include "tsgxsslio.h" -c CryptoEnclave/CryptoEnclave_t.c -o CryptoEnclave/CryptoEnclave_t.o
+echo "CC   <=  CryptoEnclave/CryptoEnclave_t.c"
+g++ -m64 -O2 -nostdinc -fvisibility=hidden -fpie -fstack-protector -IInclude -ICryptoEnclave -I/opt/intel/sgxsdk/include -I/opt/intel/sgxsdk/include/libcxx -I/opt/intel/sgxsdk/include/tlibc -I/opt/intel/sgxssl/include -include "tsgxsslio.h" -std=c++11 -nostdinc++ -c CryptoEnclave/CryptoEnclave.cpp -o CryptoEnclave/CryptoEnclave.o
+echo "CXX  <=  CryptoEnclave/CryptoEnclave.cpp"
+ 
+g++ -m64 -O2 -nostdinc -fvisibility=hidden -fpie -fstack-protector -IInclude -ICryptoEnclave -I/opt/intel/sgxsdk/include -I/opt/intel/sgxsdk/include/libcxx -I/opt/intel/sgxsdk/include/tlibc -I/opt/intel/sgxssl/include -include "tsgxsslio.h" -std=c++11 -nostdinc++ -c CryptoEnclave/EnclaveUtils.cpp -o CryptoEnclave/EnclaveUtils.o
+echo "CXX  <=  CryptoEnclave/EnclaveUtils.cpp"
+g++ CryptoEnclave/CryptoEnclave_t.o CryptoEnclave/CryptoEnclave.o CryptoEnclave/EnclaveUtils.o -o CryptoEnclave.so -m64 -O2 -Wl,--no-undefined -nostdlib -nodefaultlibs -nostartfiles -L/opt/intel/sgxsdk/lib64 -L/opt/intel/sgxssl/lib64 -Wl,--whole-archive -lsgx_trts -Wl,--no-whole-archive -Wl,--start-group -lsgx_tstdc -lsgx_tcxx -lsgx_tcrypto -lsgx_tservice -Wl,--whole-archive -lsgx_tsgxssl -Wl,--no-whole-archive -lsgx_tsgxssl_crypto -Wl,--end-group -Wl,-Bstatic -Wl,-Bsymbolic -Wl,--no-undefined -Wl,-pie,-eenclave_entry -Wl,--export-dynamic -Wl,--defsym,__ImageBase=0 -Wl,--version-script=CryptoEnclave/CryptoEnclave.lds
+echo "LINK =>  CryptoEnclave.so"
+echo "The project has been built in release hardware mode."
+echo "Please sign the CryptoEnclave.so first with your signing key before you run the cryptoTestingApp to launch and access the enclave."
+echo "To sign the enclave use the command:"
+echo "   /opt/intel/sgxsdk/bin/x64/sgx_sign sign -key <your key> -enclave CryptoEnclave.so -out <CryptoEnclave.signed.so> -config CryptoEnclave/CryptoEnclave.config.xml"
+echo "You can also sign the enclave using an external signing tool. See User's Guide for more details."
+ 
+echo "To build the project in simulation mode set SGX_MODE=SIM. To build the project in prerelease mode set SGX_PRERELEASE=1 and SGX_MODE=HW."
+make: Leaving directory '/home/node10/yangxu/SGXSSE-master/SE_SGX_1'
+ 

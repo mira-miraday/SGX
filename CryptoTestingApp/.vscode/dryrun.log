@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/node10/yangxu/SGXSSE-master/SE_SGX_1/CryptoTestingApp'
+make: Leaving directory '/home/node10/yangxu/SGXSSE-master/SE_SGX_1/CryptoTestingApp'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+

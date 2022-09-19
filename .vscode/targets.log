@@ -1,0 +1,532 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.1
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2014 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Mon Jul 18 10:35:16 2022
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# makefile (from 'Makefile', line 7)
+SGX_MODE = HW
+# default
+.SHELLFLAGS := -c
+# makefile (from 'Makefile', line 8)
+SGX_ARCH = x64
+# environment
+VSCODE_AGENT_FOLDER = /home/node10/.vscode-server
+# environment
+VSCODE_LOG_NATIVE = false
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# makefile (from 'Makefile', line 74)
+App_Cpp_Objects := CryptoTestingApp/CryptoTestingApp.o CryptoTestingApp/Server.o CryptoTestingApp/Utils.o CryptoTestingApp/Client.o
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# makefile (from 'Makefile', line 83)
+Trts_Library_Name := sgx_trts
+# automatic
+@F = $(notdir $@)
+# default
+MAKE_VERSION := 4.1
+# makefile (from 'Makefile', line 45)
+Urts_Library_Name := sgx_urts
+# makefile
+CURDIR := /home/node10/yangxu/SGXSSE-master/SE_SGX_1
+# makefile
+SHELL = /bin/sh
+# environment
+JRE_HOME = /usr/lib/jvm/java-8-openjdk-amd64/jre
+# makefile (from 'Makefile', line 104)
+CryptoEnclave_Name := CryptoEnclave.so
+# makefile (from 'Makefile', line 84)
+Service_Library_Name := sgx_tservice
+# makefile (from 'Makefile', line 1)
+SGXSSL_LIB_PATH = /opt/intel/sgxssl/lib64
+# makefile (from 'Makefile', line 87)
+CryptoEnclave_Cpp_Files := CryptoEnclave/CryptoEnclave.cpp CryptoEnclave/EnclaveUtils.cpp
+# environment
+VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"1d735750dbb1b9066c7513078396ba0f.zh-cn","_translationsConfigFile":"/home/node10/.vscode-server/data/clp/1d735750dbb1b9066c7513078396ba0f.zh-cn/tcf.json","_cacheRoot":"/home/node10/.vscode-server/data/clp/1d735750dbb1b9066c7513078396ba0f.zh-cn","_resolvedLanguagePackCoreLocation":"/home/node10/.vscode-server/data/clp/1d735750dbb1b9066c7513078396ba0f.zh-cn/dfd34e8260c270da74b5c2d86d61aee4b6d56977","_corruptedFile":"/home/node10/.vscode-server/data/clp/1d735750dbb1b9066c7513078396ba0f.zh-cn/corrupted.info","_languagePackSupport":true}
+# environment
+_ = /home/node10/.vscode-server/bin/dfd34e8260c270da74b5c2d86d61aee4b6d56977/node
+# makefile (from 'Makefile', line 62)
+App_C_Flags := -m64 -O2 -fPIC -Wno-attributes -IInclude -IApp -I/opt/intel/sgxsdk/include -I/usr/include -I/usr/include/openssl -DNDEBUG -UEDEBUG -UDEBUG
+# environment
+MAVEN_HOME = /opt/maven/apache-maven-3.8.4
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# makefile (from 'Makefile', line 86)
+Crypto_Library_Name := sgx_tcrypto
+# makefile (from 'Makefile', line 110)
+Build_Mode = HW_RELEASE
+# environment
+LESSOPEN = | /usr/bin/lesspipe %s
+# environment
+VSCODE_CWD = /home/node10
+# makefile (from 'Makefile', line 6)
+SGX_SDK = /opt/intel/sgxsdk
+# environment
+SSH_CONNECTION = 192.168.1.182 52265 192.168.31.214 22
+# environment
+PATH = /home/node10/.vscode-server/bin/dfd34e8260c270da74b5c2d86d61aee4b6d56977/bin/remote-cli:/home/node10/.local/bin:/home/node10/anaconda3/bin:/home/node10/anaconda3/condabin:/home/ubuntu/GOPATH/bin:/home/ubuntu/go/bin:/usr/local/java/jdk1.8.0_271/bin:/opt/maven/apache-maven-3.8.4/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/node10/下载/clion-2021.3.3/bin:/usr/lib/jvm/java-8-openjdk-amd64/bin:/home/node10/GOROOT/bin:/home/node10/GOPATH/bin
+# makefile (from 'Makefile', line 65)
+App_Cpp_Flags := -m64 -O2 -fPIC -Wno-attributes -IInclude -IApp -I/opt/intel/sgxsdk/include -I/usr/include -I/usr/include/openssl -DNDEBUG -UEDEBUG -UDEBUG -std=c++11
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# makefile (from 'Makefile', line 48)
+App_Cpp_Files := CryptoTestingApp/CryptoTestingApp.cpp CryptoTestingApp/Server.cpp CryptoTestingApp/Utils.cpp CryptoTestingApp/Client.cpp
+# makefile (from 'Makefile', line 103)
+CryptoEnclave_Cpp_Objects := CryptoEnclave/CryptoEnclave.o CryptoEnclave/EnclaveUtils.o
+# environment
+GOPATH = /home/node10/GOPATH
+# environment
+CONDA_PREFIX = /home/node10/anaconda3
+# environment
+VSCODE_LOG_STACK = false
+# makefile (from 'Makefile', line 90)
+CryptoEnclave_C_Flags := -m64 -O2 -nostdinc -fvisibility=hidden -fpie -fstack-protector -IInclude -ICryptoEnclave -I/opt/intel/sgxsdk/include -I/opt/intel/sgxsdk/include/libcxx -I/opt/intel/sgxsdk/include/tlibc -I/opt/intel/sgxssl/include -include "tsgxsslio.h"
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# makefile (from 'Makefile', line 71)
+App_Link_Flags := -m64 -O2 -L/opt/intel/sgxsdk/lib64 -lsgx_urts -lpthread -lpcap -L/opt/intel/sgxssl/lib64 -lsgx_usgxssl -lssl -lcrypto -lsgx_uae_service
+# environment
+LS_COLORS = 
+# automatic
+%F = $(notdir $%)
+# environment
+CONDA_EXE = /home/node10/anaconda3/bin/conda
+# environment
+VSCODE_PIPE_LOGGING = true
+# makefile (from 'Makefile', line 23)
+SGX_LIBRARY_PATH := /opt/intel/sgxsdk/lib64
+# environment
+PWD = /home/node10/yangxu/SGXSSE-master/SE_SGX_1
+# environment
+VSCODE_IPC_HOOK_CLI = /run/user/1000/vscode-ipc-caff2001-c1c5-46af-b9a7-5391fded1f08.sock
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# makefile (from 'Makefile', line 105)
+Signed_CryptoEnclave_Name := CryptoEnclave.signed.so
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /home/node10
+# environment
+LESSCLOSE = /usr/bin/lesspipe %s %s
+# environment
+LOGNAME = node10
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# environment
+CONDA_PROMPT_MODIFIER = (base) 
+# automatic
++F = $(notdir $+)
+# makefile (from 'Makefile', line 91)
+CryptoEnclave_Cpp_Flags := -m64 -O2 -nostdinc -fvisibility=hidden -fpie -fstack-protector -IInclude -ICryptoEnclave -I/opt/intel/sgxsdk/include -I/opt/intel/sgxsdk/include/libcxx -I/opt/intel/sgxsdk/include/tlibc -I/opt/intel/sgxssl/include -include "tsgxsslio.h" -std=c++11 -nostdinc++
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# makefile (from 'Makefile', line 49)
+App_Include_Paths := -IInclude -IApp -I/opt/intel/sgxsdk/include -I/usr/include -I/usr/include/openssl
+# environment
+MAKELEVEL := 0
+# environment
+CONDA_DEFAULT_ENV = base
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# makefile (from 'Makefile', line 106)
+CryptoEnclave_Config_File := CryptoEnclave/CryptoEnclave.config.xml
+# environment
+SHLVL = 3
+# environment
+JAVA_HOME = /usr/lib/jvm/java-8-openjdk-amd64
+# environment
+XDG_SESSION_ID = 1242
+# environment
+USER = node10
+# makefile (from 'Makefile', line 93)
+CryptoEnclave_Link_Flags := -m64 -O2 -Wl,--no-undefined -nostdlib -nodefaultlibs -nostartfiles -L/opt/intel/sgxsdk/lib64 -L/opt/intel/sgxssl/lib64 -Wl,--whole-archive -lsgx_trts -Wl,--no-whole-archive -Wl,--start-group -lsgx_tstdc -lsgx_tcxx -lsgx_tcrypto -lsgx_tservice -Wl,--whole-archive -lsgx_tsgxssl -Wl,--no-whole-archive -lsgx_tsgxssl_crypto -Wl,--end-group -Wl,-Bstatic -Wl,-Bsymbolic -Wl,--no-undefined -Wl,-pie,-eenclave_entry -Wl,--export-dynamic -Wl,--defsym,__ImageBase=0 -Wl,--version-script=CryptoEnclave/CryptoEnclave.lds
+# makefile
+.DEFAULT_GOAL := all
+# environment
+GOROOT = /home/node10/GOROOT
+# environment
+CLASSPATH = .:/usr/lib/jvm/java-8-openjdk-amd64/lib:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+CONDA_SHLVL = 1
+# default
+MAKE_COMMAND := make
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# environment
+LANGUAGE = zh_CN:zh
+# makefile (from 'Makefile', line 37)
+SGX_COMMON_CFLAGS := -m64 -O2
+# makefile
+MAKEFLAGS = pqrR
+# environment
+MFLAGS = -pqrR
+# environment
+SSH_CLIENT = 192.168.1.182 52265 22
+# environment
+MAIL = /var/mail/node10
+# makefile (from 'Makefile', line 2)
+SGXSSL_INCLUDE_PATH = /opt/intel/sgxssl/include
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+BROWSER = /home/node10/.vscode-server/bin/dfd34e8260c270da74b5c2d86d61aee4b6d56977/bin/helpers/browser.sh
+# makefile (from 'Makefile', line 88)
+CryptoEnclave_Include_Paths := -IInclude -ICryptoEnclave -I/opt/intel/sgxsdk/include -I/opt/intel/sgxsdk/include/libcxx -I/opt/intel/sgxsdk/include/tlibc -I/opt/intel/sgxssl/include -include "tsgxsslio.h"
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# makefile (from 'Makefile', line 76)
+App_Name := cryptoTestingApp
+# environment
+LC_ALL = C
+# environment
+CONDA_PYTHON_EXE = /home/node10/anaconda3/bin/python
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# environment
+_CE_M = 
+# makefile (from 'Makefile', line 24)
+SGX_ENCLAVE_SIGNER := /opt/intel/sgxsdk/bin/x64/sgx_sign
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# default
+.RECIPEPREFIX := 
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# makefile (from 'Makefile', line 25)
+SGX_EDGER8R := /opt/intel/sgxsdk/bin/x64/sgx_edger8r
+# environment
+LANG = C
+# environment
+VSCODE_EXTHOST_WILL_SEND_SOCKET = true
+# environment
+_CE_CONDA = 
+# variable set hash-table stats:
+# Load=110/1024=11%, Rehash=0, Collisions=20/208=10%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# CryptoEnclave (device 66306, inode 3313528): 14 files, no impossibilities.
+# . (device 66306, inode 3313525): 19 files, no impossibilities.
+# CryptoTestingApp (device 66306, inode 3313541): 18 files, no impossibilities.
+
+# 51 files, no impossibilities in 3 directories.
+
+# Implicit Rules
+
+CryptoTestingApp/%.o: CryptoTestingApp/%.cpp
+#  recipe to execute (from 'Makefile', line 143):
+	@$(CXX) $(App_Cpp_Flags) -c $< -o $@
+	@echo "CXX  <=  $<"
+
+CryptoEnclave/%.o: CryptoEnclave/%.cpp
+#  recipe to execute (from 'Makefile', line 157):
+	@$(CXX) $(CryptoEnclave_Cpp_Flags) -c $< -o $@
+	@echo "CXX  <=  $<"
+
+# 2 implicit rules, 0 (0.0%) terminal.
+
+# Files
+
+CryptoTestingApp/CryptoEnclave_u.o: CryptoTestingApp/CryptoEnclave_u.c
+#  Implicit rule search has not been done.
+#  Last modified 2022-07-15 15:07:51.988062482
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 140):
+	@$(CC) $(App_C_Flags) -c $< -o $@
+	@echo "CC   <=  $<"
+
+all: cryptoTestingApp CryptoEnclave.so
+#  Phony target (prerequisite of .PHONY).
+#  Command line target.
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
+ 
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := all
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := cryptoTestingApp CryptoEnclave.so
+# automatic
+# | := 
+# automatic
+# < := cryptoTestingApp
+# automatic
+# ^ := cryptoTestingApp CryptoEnclave.so
+# automatic
+# ? := cryptoTestingApp CryptoEnclave.so
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=2/17=12%
+#  recipe to execute (from 'Makefile', line 119):
+	@echo "The project has been built in release hardware mode."
+	@echo "Please sign the $(CryptoEnclave_Name) first with your signing key before you run the $(App_Name) to launch and access the enclave."
+	@echo "To sign the enclave use the command:"
+	@echo "   $(SGX_ENCLAVE_SIGNER) sign -key <your key> -enclave $(CryptoEnclave_Name) -out <$(Signed_CryptoEnclave_Name)> -config $(CryptoEnclave_Config_File)"
+	@echo "You can also sign the enclave using an external signing tool. See User's Guide for more details."
+	@echo "To build the project in simulation mode set SGX_MODE=SIM. To build the project in prerelease mode set SGX_PRERELEASE=1 and SGX_MODE=HW."
+
+.PHONY: all run clean
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+CryptoEnclave/EnclaveUtils.o: CryptoEnclave/EnclaveUtils.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'EnclaveUtils'
+#  Last modified 2022-07-15 15:07:54.180073274
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 157):
+	@$(CXX) $(CryptoEnclave_Cpp_Flags) -c $< -o $@
+	@echo "CXX  <=  $<"
+
+CryptoEnclave/CryptoEnclave_t.c: /opt/intel/sgxsdk/bin/x64/sgx_edger8r CryptoEnclave/CryptoEnclave.edl
+#  Implicit rule search has not been done.
+#  Last modified 2022-07-15 15:07:53.336069117
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 151):
+	@cd CryptoEnclave && $(SGX_EDGER8R) --trusted ../CryptoEnclave/CryptoEnclave.edl --search-path ../CryptoEnclave --search-path $(SGX_SDK)/include
+	@echo "GEN  =>  $@"
+
+# Not a target:
+/opt/intel/sgxsdk/bin/x64/sgx_edger8r:
+#  Implicit rule search has been done.
+#  Last modified 2021-10-28 16:04:34.436870453
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+CryptoTestingApp/Client.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-18 21:08:34.215168286
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-10 20:21:39.924883871
+#  File has been updated.
+#  Successfully updated.
+
+CryptoEnclave/CryptoEnclave.o: CryptoEnclave/CryptoEnclave.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'CryptoEnclave'
+#  Last modified 2022-07-15 15:07:53.952072151
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 157):
+	@$(CXX) $(CryptoEnclave_Cpp_Flags) -c $< -o $@
+	@echo "CXX  <=  $<"
+
+# Not a target:
+CryptoEnclave/CryptoEnclave.edl:
+#  Implicit rule search has been done.
+#  Last modified 2020-11-19 07:03:01
+#  File has been updated.
+#  Successfully updated.
+
+CryptoTestingApp/CryptoEnclave_u.c: /opt/intel/sgxsdk/bin/x64/sgx_edger8r CryptoEnclave/CryptoEnclave.edl
+#  Implicit rule search has not been done.
+#  Last modified 2022-07-15 15:07:51.968062383
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 137):
+	@cd CryptoTestingApp && $(SGX_EDGER8R) --untrusted ../CryptoEnclave/CryptoEnclave.edl --search-path ../CryptoEnclave --search-path $(SGX_SDK)/include
+	@echo "GEN  =>  $@"
+
+cryptoTestingApp: CryptoTestingApp/CryptoEnclave_u.o CryptoTestingApp/CryptoTestingApp.o CryptoTestingApp/Server.o CryptoTestingApp/Utils.o CryptoTestingApp/Client.o
+#  Implicit rule search has not been done.
+#  Last modified 2022-07-15 15:07:53.324069058
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 146):
+	@$(CXX) $^ -o $@ $(App_Link_Flags)
+	@echo "LINK =>  $@"
+
+# Not a target:
+CryptoTestingApp/Server.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-25 17:23:19.267984342
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+CryptoTestingApp/CryptoTestingApp.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-26 10:01:53.858674637
+#  File has been updated.
+#  Successfully updated.
+
+CryptoEnclave.signed.so: CryptoEnclave.so
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 163):
+	@$(SGX_ENCLAVE_SIGNER) sign -key CryptoEnclave/CryptoEnclave_private.pem -enclave $(CryptoEnclave_Name) -out $@ -config $(CryptoEnclave_Config_File)
+	@echo "SIGN =>  $@"
+
+# Not a target:
+CryptoTestingApp/Utils.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2020-11-19 07:03:01
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+run: all
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+CryptoTestingApp/Client.o: CryptoTestingApp/Client.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'Client'
+#  Last modified 2022-07-15 15:07:53.264068763
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 143):
+	@$(CXX) $(App_Cpp_Flags) -c $< -o $@
+	@echo "CXX  <=  $<"
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 168):
+	@rm -f $(App_Name) $(CryptoEnclave_Name) $(Signed_CryptoEnclave_Name) $(App_Cpp_Objects) CryptoTestingApp/CryptoEnclave_u.* $(CryptoEnclave_Cpp_Objects) CryptoEnclave/CryptoEnclave_t.*
+
+# Not a target:
+CryptoEnclave/EnclaveUtils.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2020-11-19 07:03:01
+#  File has been updated.
+#  Successfully updated.
+
+CryptoEnclave/CryptoEnclave_t.o: CryptoEnclave/CryptoEnclave_t.c
+#  Implicit rule search has not been done.
+#  Last modified 2022-07-15 15:07:53.372069296
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 154):
+	@$(CC) $(CryptoEnclave_C_Flags) -c $< -o $@
+	@echo "CC   <=  $<"
+
+CryptoTestingApp/Server.o: CryptoTestingApp/Server.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'Server'
+#  Last modified 2022-07-15 15:07:52.716066066
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 143):
+	@$(CXX) $(App_Cpp_Flags) -c $< -o $@
+	@echo "CXX  <=  $<"
+
+CryptoTestingApp/CryptoTestingApp.o: CryptoTestingApp/CryptoTestingApp.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'CryptoTestingApp'
+#  Last modified 2022-07-15 15:07:52.328064155
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 143):
+	@$(CXX) $(App_Cpp_Flags) -c $< -o $@
+	@echo "CXX  <=  $<"
+
+# Not a target:
+CryptoEnclave/CryptoEnclave.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-16 10:54:29.683266302
+#  File has been updated.
+#  Successfully updated.
+
+CryptoEnclave.so: CryptoEnclave/CryptoEnclave_t.o CryptoEnclave/CryptoEnclave.o CryptoEnclave/EnclaveUtils.o
+#  Implicit rule search has not been done.
+#  Last modified 2022-07-15 15:07:54.23207353
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 160):
+	@$(CXX) $^ -o $@ $(CryptoEnclave_Link_Flags)
+	@echo "LINK =>  $@"
+
+CryptoTestingApp/Utils.o: CryptoTestingApp/Utils.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'Utils'
+#  Last modified 2022-07-15 15:07:52.968067305
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 143):
+	@$(CXX) $(App_Cpp_Flags) -c $< -o $@
+	@echo "CXX  <=  $<"
+ 
+
+# files hash-table stats:
+# Load=28/1024=3%, Rehash=0, Collisions=1/84=1%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 80 / storage = 1385 B / avg = 17 B
+# current buf: size = 8162 B / used = 1385 B / count = 80 / avg = 17 B
+
+# strcache performance: lookups = 130 / hit rate = 38%
+# hash-table stats:
+# Load=80/8192=1%, Rehash=0, Collisions=3/130=2%
+# Finished Make data base on Mon Jul 18 10:35:16 2022
+
+ 
